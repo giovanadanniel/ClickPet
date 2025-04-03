@@ -7,169 +7,13 @@
     <title>Sobre - ClickPet</title>
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/x-icon" href="logoCachorroSemFundo.png">
-    <style>
-        /* Botão Login */
-        .login-btn {
-            background-color: transparent;
-            color: #0056b3;
-            border: 2px solid #0056b3;
-            padding: 8px 20px;
-            border-radius: 20px;
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.3s;
-            margin-left: 15px;
-            text-decoration: none;
-            font-size: 0.9em;
-        }
-
-        .login-btn:hover {
-            background-color: #0056b3;
-            color: white;
-        }
-
-        /* Ajuste no header-container para incluir o botão */
-        .header-container {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 15px 5%;
-            background-color: white;
-            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-            position: relative;
-            /* Adicionado para melhor posicionamento */
-        }
-
-        /* Estilos adicionais específicos para a página Sobre */
-        .sobre-container {
-            max-width: 1200px;
-            margin: 40px auto;
-            padding: 0 5%;
-        }
-
-        .sobre-content {
-            background-color: white;
-            border-radius: 10px;
-            padding: 30px;
-            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
-        }
-
-        .sobre-content h2 {
-            color: #0056b3;
-            font-size: 1.8em;
-            margin-top: 0;
-            margin-bottom: 20px;
-        }
-
-        .sobre-content p {
-            line-height: 1.6;
-            margin-bottom: 20px;
-            color: #333;
-        }
-
-        .missao-visao {
-            display: flex;
-            gap: 30px;
-            margin-top: 30px;
-        }
-
-        .missao,
-        .visao {
-            flex: 1;
-            background-color: #f8f9fa;
-            padding: 20px;
-            border-radius: 8px;
-        }
-
-        .missao h3,
-        .visao h3 {
-            color: #0056b3;
-            border-bottom: 2px solid #0056b3;
-            padding-bottom: 10px;
-        }
-
-        @media (max-width: 768px) {
-            .missao-visao {
-                flex-direction: column;
-            }
-        }
-
-        /* Estilos adicionais específicos para o rodapé */
-
-        footer {
-            background-color: #0056b3;
-            color: white;
-            padding: 40px 5%;
-            margin-top: 50px;
-        }
-
-        .footer-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 30px;
-        }
-
-        .footer-logo {
-            font-size: 1.8em;
-            font-weight: 600;
-            margin-bottom: 15px;
-        }
-
-        .footer-section h3 {
-            font-size: 1.2em;
-            margin-bottom: 20px;
-            border-bottom: 2px solid rgba(255, 255, 255, 0.2);
-            padding-bottom: 10px;
-        }
-
-        .footer-section ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-
-        .footer-section li {
-            margin-bottom: 10px;
-        }
-
-        .footer-section a {
-            color: rgba(255, 255, 255, 0.8);
-            text-decoration: none;
-            transition: color 0.3s;
-        }
-
-        .footer-section a:hover {
-            color: white;
-        }
-
-        .social-icons {
-            display: flex;
-            gap: 15px;
-            margin-top: 15px;
-        }
-
-        .social-icons a {
-            color: white;
-            font-size: 1.5em;
-        }
-
-        .copyright {
-            text-align: center;
-            margin-top: 40px;
-            padding-top: 20px;
-            border-top: 1px solid rgba(255, 255, 255, 0.2);
-            color: rgba(255, 255, 255, 0.7);
-            font-size: 0.9em;
-        }
-    </style>
 </head>
 
 <body>
     <header>
         <div class="header-container">
-            <h1>ClickPet</h1>
+            <img src="logoSemFundo.png" alt="ClickPet Logo" class="logo">
+            <div class="search-container"></div>
             <form class="search-bar">
                 <input type="text" placeholder="O que seu pet precisa?" />
                 <button type="submit">🔍</button>
@@ -177,9 +21,9 @@
             <nav>
                 <ul>
                     <li><a href="index.html">Home</a></li>
-                    <li><a href="#sobre">Sobre</a></li>
-                    <li><a href="#servicos">Serviços</a></li>
-                    <li><a href="#contato">Contato</a></li>
+                    <li><a href="sobre.html">Sobre</a></li>
+                    <li><a href="servico.html">Serviços</a></li>
+                    <li><a href="contato.html">Contato</a></li>
                 </ul>
             </nav>
             <a href="login.html" class="login-btn">Login</a>

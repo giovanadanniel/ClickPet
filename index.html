@@ -1,34 +1,556 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ClickPet</title>
+    <title>ClickPet - Home</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="logoCachorroSemFundo.png">
+    <style>
+        /* Estilos específicos para a home */
+        .hero {
+            background: linear-gradient(rgba(0, 86, 179, 0.8), rgba(0, 86, 179, 0.6)),
+                url('pet-hero.jpg') center/cover no-repeat;
+            height: 500px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            padding: 0 5%;
+        }
+
+        .hero-content h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .hero-content p {
+            font-size: 1.2em;
+            margin-bottom: 30px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .btn-hero {
+            background-color: white;
+            color: #0056b3;
+            padding: 12px 30px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1em;
+            transition: all 0.3s;
+            display: inline-block;
+        }
+
+        .btn-hero:hover {
+            background-color: #f0f0f0;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .destaques {
+            padding: 60px 5%;
+            background-color: white;
+        }
+
+        .destaques-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .destaques-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .destaque-card {
+            background-color: #f8f9fa;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+
+        .destaque-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .destaque-img {
+            height: 200px;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .destaque-content {
+            padding: 20px;
+        }
+
+        .destaque-content h3 {
+            color: #0056b3;
+            margin-top: 0;
+        }
+
+        .servicos-home {
+            padding: 60px 5%;
+            background-color: #f8f9fa;
+        }
+
+        .servicos-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .servicos-home h2 {
+            text-align: center;
+            color: #0056b3;
+            margin-bottom: 40px;
+        }
+
+        .depoimentos {
+            padding: 60px 5%;
+            background-color: white;
+        }
+
+        .depoimentos-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .depoimentos-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .depoimento-card {
+            background-color: #f8f9fa;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .depoimento-text {
+            font-style: italic;
+            margin-bottom: 20px;
+        }
+
+        .depoimento-autor {
+            font-weight: 600;
+            color: #0056b3;
+        }
+
+        .cta {
+            padding: 80px 5%;
+            background: linear-gradient(rgba(0, 86, 179, 0.9), rgba(0, 86, 179, 0.8)),
+                url('pet-cta.jpg') center/cover no-repeat;
+            text-align: center;
+            color: white;
+        }
+
+        .cta h2 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+
+        .cta p {
+            max-width: 700px;
+            margin: 0 auto 30px;
+            font-size: 1.1em;
+        }
+
+        @media (max-width: 768px) {
+            .hero {
+                height: 400px;
+            }
+
+            .hero-content h1 {
+                font-size: 2.2em;
+            }
+        }
+    </style>
 </head>
+
 <body>
     <header>
         <div class="header-container">
-           
             <img src="logoSemFundo.png" alt="ClickPet Logo" class="logo">
-
             <div class="search-container"></div>
             <form class="search-bar">
                 <input type="text" placeholder="O que seu pet precisa?" />
                 <button type="submit">🔍</button>
             </form>
-            
             <nav>
                 <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#sobre">Sobre</a></li>
-                    <li><a href="#servicos">Serviços</a></li>
-                    <li><a href="#contato">Contato</a></li>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="sobre.html">Sobre</a></li>
+                    <li><a href="servico.html">Serviços</a></li>
+                    <li><a href="contato.html">Contato</a></li>
                 </ul>
             </nav>
-
             <a href="login.html" class="login-btn">Login</a>
         </div>
     </header>
+
+    <main>
+        <!-- Seção Hero -->
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Seu pet merece o melhor cuidado</h1>
+                <p>Na ClickPet, oferecemos serviços premium para garantir o bem-estar e felicidade do seu companheiro de
+                    quatro patas.</p>
+                <a href="servico.html" class="btn-hero">Conheça nossos serviços</a>
+            </div>
+        </section>
+
+        <!-- Seção Destaques com Carrossel -->
+
+
+
+
+        <!-- Seção Destaques com Carrossel -->
+        <section class="destaques">
+            <div class="destaques-container">
+                <h2>Por que escolher a ClickPet?</h2>
+                <div class="carrossel-container">
+                    <button class="carrossel-btn prev" onclick="moveCarrossel('destaquesCarrossel', -1)">❮</button>
+                    <div class="carrossel" id="destaquesCarrossel">
+                        <!-- Slides... -->
+                        <!-- Slide 1 -->
+                        <div class="carrossel-item">
+                            <div class="destaques-grid">
+                                <div class="destaque-card">
+                                    <div class="destaque-img" style="background-image: url('pet-profissionais.jpg');">
+                                    </div>
+                                    <div class="destaque-content">
+                                        <h3>Profissionais Qualificados</h3>
+                                        <p>Nossa equipe é composta por especialistas apaixonados por animais e altamente
+                                            treinados.</p>
+                                    </div>
+                                </div>
+                                <div class="destaque-card">
+                                    <div class="destaque-img" style="background-image: url('pet-produtos.jpg');"></div>
+                                    <div class="destaque-content">
+                                        <h3>Produtos Premium</h3>
+                                        <p>Utilizamos apenas produtos de alta qualidade, hipoalergênicos e testados
+                                            dermatologicamente.</p>
+                                    </div>
+                                </div>
+                                <div class="destaque-card">
+                                    <div class="destaque-img" style="background-image: url('pet-ambiente.jpg');"></div>
+                                    <div class="destaque-content">
+                                        <h3>Ambiente Acolhedor</h3>
+                                        <p>Espaço projetado para o conforto e segurança dos pets, reduzindo o estresse
+                                            durante os procedimentos.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Slide 2 -->
+                        <div class="carrossel-item">
+                            <div class="destaques-grid">
+                                <div class="destaque-card">
+                                    <div class="destaque-img" style="background-image: url('pet-higiene.jpg');"></div>
+                                    <div class="destaque-content">
+                                        <h3>Higiene Impecável</h3>
+                                        <p>Nossos espaços são limpos e desinfetados constantemente, garantindo a saúde
+                                            de todos os pets.</p>
+                                    </div>
+                                </div>
+                                <div class="destaque-card">
+                                    <div class="destaque-img" style="background-image: url('pet-atendimento.jpg');">
+                                    </div>
+                                    <div class="destaque-content">
+                                        <h3>Atendimento Personalizado</h3>
+                                        <p>Cada pet recebe atenção individualizada de acordo com suas necessidades
+                                            específicas.</p>
+                                    </div>
+                                </div>
+                                <div class="destaque-card">
+                                    <div class="destaque-img" style="background-image: url('pet-localizacao.jpg');">
+                                    </div>
+                                    <div class="destaque-content">
+                                        <h3>Localização Privilegiada</h3>
+                                        <p>Facilidade de acesso e estacionamento amplo para sua comodidade.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="carrossel-btn next" onclick="moveCarrossel('destaquesCarrossel', 1)">❯</button>
+                    <div class="carrossel-indicadores" id="destaquesIndicadores">
+                        <!-- Indicadores... -->
+                        <div class="carrossel-indicadores" id="destaquesIndicadores">
+                            <span class="indicador ativo" onclick="goToSlide('destaquesCarrossel', 0)"></span>
+                            <span class="indicador" onclick="goToSlide('destaquesCarrossel', 1)"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+
+
+        <!-- oooooooooooooooooo -->
+        <section class="destaques">
+            <div class="destaques-container">
+                <h2>Por que escolher a ClickPet?</h2>
+                <div class="carrossel-container">
+                    <div class="carrossel" id="destaquesCarrossel">
+
+                    </div>
+                    <button class="carrossel-btn prev" onclick="moveCarrossel('destaquesCarrossel', -1)">❮</button>
+                    <button class="carrossel-btn next" onclick="moveCarrossel('destaquesCarrossel', 1)">❯</button>
+                    <div class="carrossel-indicadores" id="destaquesIndicadores">
+                        <span class="indicador ativo" onclick="goToSlide('destaquesCarrossel', 0)"></span>
+                        <span class="indicador" onclick="goToSlide('destaquesCarrossel', 1)"></span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção Serviços -->
+        <section class="servicos-home">
+            <div class="servicos-container">
+                <h2>Nossos Serviços</h2>
+                <div class="destaques-grid">
+                    <div class="destaque-card">
+                        <div class="destaque-img" style="background-image: url('banho-pet.jpg');"></div>
+                        <div class="destaque-content">
+                            <h3>Banho Completo</h3>
+                            <p>Hidratação, limpeza de ouvidos e corte de unhas com produtos de alta qualidade.</p>
+                            <a href="reserva.html?servico=banho" class="btn-reserva">Agendar</a>
+                        </div>
+                    </div>
+                    <div class="destaque-card">
+                        <div class="destaque-img" style="background-image: url('tosa-pet.jpg');"></div>
+                        <div class="destaque-content">
+                            <h3>Tosa Higiênica</h3>
+                            <p>Tosa profissional realizada por especialistas em cuidados com pelagem animal.</p>
+                            <a href="reserva.html?servico=tosa" class="btn-reserva">Agendar</a>
+                        </div>
+                    </div>
+                    <div class="destaque-card">
+                        <div class="destaque-img" style="background-image: url('vet-pet.jpg');"></div>
+                        <div class="destaque-content">
+                            <h3>Consulta Veterinária</h3>
+                            <p>Atendimento especializado com profissionais qualificados para cuidar da saúde do seu pet.
+                            </p>
+                            <a href="reserva.html?servico=veterinario" class="btn-reserva">Agendar</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção Depoimentos com Carrossel -->
+        <section class="depoimentos">
+            <div class="depoimentos-container">
+                <h2>O que dizem sobre nós</h2>
+                <div class="carrossel-container">
+                    <div class="carrossel" id="depoimentosCarrossel">
+                        <!-- Slide 1 -->
+                        <div class="carrossel-item">
+                            <div class="depoimentos-grid">
+                                <div class="depoimento-card">
+                                    <div class="depoimento-text">
+                                        "Meu cachorro adora vir para a ClickPet! Os profissionais são incríveis e ele
+                                        sempre volta feliz e cheiroso."
+                                    </div>
+                                    <div class="depoimento-autor">- Ana Carolina</div>
+                                </div>
+                                <div class="depoimento-card">
+                                    <div class="depoimento-text">
+                                        "Finalmente encontrei um lugar que trata meu gato com o carinho e cuidado que
+                                        ele merece. Recomendo a todos!"
+                                    </div>
+                                    <div class="depoimento-autor">- Ricardo Almeida</div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Slide 2 -->
+                        <div class="carrossel-item">
+                            <div class="depoimentos-grid">
+                                <div class="depoimento-card">
+                                    <div class="depoimento-text">
+                                        "Ótimo atendimento e profissionais qualificados. Meu bulldog francês sempre é
+                                        bem cuidado e volta super feliz."
+                                    </div>
+                                    <div class="depoimento-autor">- Fernanda Souza</div>
+                                </div>
+                                <div class="depoimento-card">
+                                    <div class="depoimento-text">
+                                        "A ClickPet salvou meu pet em uma emergência. Atendimento rápido e eficiente.
+                                        Sou cliente fiel!"
+                                    </div>
+                                    <div class="depoimento-autor">- Carlos Eduardo</div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Slide 3 -->
+                        <div class="carrossel-item">
+                            <div class="depoimentos-grid">
+                                <div class="depoimento-card">
+                                    <div class="depoimento-text">
+                                        "Adoro o cuidado com os detalhes. Meu pet tem alergia e eles sempre usam
+                                        produtos específicos para ele."
+                                    </div>
+                                    <div class="depoimento-autor">- Juliana Martins</div>
+                                </div>
+                                <div class="depoimento-card">
+                                    <div class="depoimento-text">
+                                        "O hotel para pets é maravilhoso! Quando viajo, sei que meu dog está em boas
+                                        mãos."
+                                    </div>
+                                    <div class="depoimento-autor">- Roberto Silva</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="carrossel-btn prev" onclick="moveCarrossel('depoimentosCarrossel', -1)">❮</button>
+                    <button class="carrossel-btn next" onclick="moveCarrossel('depoimentosCarrossel', 1)">❯</button>
+                    <div class="carrossel-indicadores" id="depoimentosIndicadores">
+                        <span class="indicador ativo" onclick="goToSlide('depoimentosCarrossel', 0)"></span>
+                        <span class="indicador" onclick="goToSlide('depoimentosCarrossel', 1)"></span>
+                        <span class="indicador" onclick="goToSlide('depoimentosCarrossel', 2)"></span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <div class="footer-logo">ClickPet</div>
+                <p>Cuidando do seu pet com amor e dedicação desde 2025.</p>
+            </div>
+
+            <div class="footer-section">
+                <h3>Links Rápidos</h3>
+                <ul>
+                    <li><a href="sobre.html">Sobre Nós</a></li>
+                    <li><a href="servico.html">Nossos Serviços</a></li>
+                    <li><a href="#faq">Perguntas Frequentes</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Serviços</h3>
+                <ul>
+                    <li><a href="#veterinario">Veterinário</a></li>
+                    <li><a href="#petshop">Pet Shop</a></li>
+                    <li><a href="#adocao">Adoção</a></li>
+                    <li><a href="#hotel">Hotel para Pets</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Contato</h3>
+                <ul>
+                    <li>📞 (41) 9999-9999</li>
+                    <li>✉️ contato@clickpet.com.br</li>
+                    <li>📍 Curitiba, Brasil</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="copyright">
+            &copy; 2023 ClickPet. Todos os direitos reservados.
+        </div>
+    </footer>
+    <script>
+        const carrosseis = {
+            destaquesCarrossel: {
+                currentIndex: 0,
+                totalSlides: document.querySelectorAll('#destaquesCarrossel .carrossel-item').length
+            },
+            depoimentosCarrossel: {
+                currentIndex: 0,
+                totalSlides: document.querySelectorAll('#depoimentosCarrossel .carrossel-item').length
+            }
+        };
+
+        // Inicializa os indicadores
+        function initIndicators() {
+            // Para o carrossel de destaques
+            const destaquesIndicators = document.querySelectorAll('#destaquesIndicadores .indicador');
+            destaquesIndicators.forEach((indicator, index) => {
+                indicator.addEventListener('click', () => {
+                    goToSlide('destaquesCarrossel', index);
+                });
+            });
+
+            // Para o carrossel de depoimentos
+            const depoimentosIndicators = document.querySelectorAll('#depoimentosIndicadores .indicador');
+            depoimentosIndicators.forEach((indicator, index) => {
+                indicator.addEventListener('click', () => {
+                    goToSlide('depoimentosCarrossel', index);
+                });
+            });
+        }
+
+        // Função para mover o carrossel
+        function moveCarrossel(carrosselId, direction) {
+            const carrossel = carrosseis[carrosselId];
+            carrossel.currentIndex = (carrossel.currentIndex + direction + carrossel.totalSlides) % carrossel.totalSlides;
+            updateCarrossel(carrosselId);
+        }
+
+        // Função para ir para um slide específico
+        function goToSlide(carrosselId, index) {
+            const carrossel = carrosseis[carrosselId];
+            carrossel.currentIndex = index;
+            updateCarrossel(carrosselId);
+        }
+
+        // Atualiza a posição do carrossel e os indicadores
+        function updateCarrossel(carrosselId) {
+            const carrossel = carrosseis[carrosselId];
+            const element = document.getElementById(carrosselId);
+            const transformValue = -carrossel.currentIndex * 100;
+            element.style.transform = `translateX(${transformValue}%)`;
+
+            // Atualiza indicadores
+            const indicatorsContainer = carrosselId + 'Indicadores';
+            const indicators = document.querySelectorAll(`#${indicatorsContainer} .indicador`);
+
+            indicators.forEach((indicator, index) => {
+                indicator.classList.toggle('ativo', index === carrossel.currentIndex);
+            });
+        }
+
+        // Auto-rotacionar os carrosséis
+        function startAutoRotation() {
+            setInterval(() => {
+                moveCarrossel('destaquesCarrossel', 1);
+            }, 5000);
+
+            setInterval(() => {
+                moveCarrossel('depoimentosCarrossel', 1);
+            }, 6000);
+        }
+
+        // Inicializa tudo quando o DOM estiver carregado
+        document.addEventListener('DOMContentLoaded', () => {
+            initIndicators();
+            startAutoRotation();
+
+            // Garante que o primeiro indicador esteja ativo
+            updateCarrossel('destaquesCarrossel');
+            updateCarrossel('depoimentosCarrossel');
+        });
+    </script>
 </body>
+
 </html>
