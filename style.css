@@ -8,14 +8,28 @@ body {
 }
 .header-container {
     display: flex;
-    align-items: center;
     justify-content: space-between;
-    padding: 15px 5%;
+    align-items: center;
+    padding: 0 5%; 
     background-color: white;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    height: 70px; 
+    position: relative; 
 }
 
-h1 {
+.search-container {
+    margin-left: auto;
+    margin-right: 20    px;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding-top: 5px;
+}
+
+h1 {    
     margin: 0;
     font-size: 2em;
     color: #0056b3;
@@ -26,7 +40,8 @@ h1 {
     align-items: center;
     background: #f1f1f1;
     border-radius: 20px;
-    padding: 5px 10px;
+    padding: 6px 15px;
+    margin-right: 30px;
 }
 
 .search-bar input {
@@ -70,7 +85,7 @@ nav ul li a {
     font-weight: 500;
     font-size: 1em;
     transition: 0.3s;
-    padding: 10px 15px;
+    padding: 6px 10px;
     display: block;
 }
 
@@ -79,12 +94,42 @@ nav ul li a:hover {
 }
 
 .logo {
-    position: fixed;
-    top: 10px;
-    left: 10px;
-    width: 100px;
-    z-index: 1000;
+     width: 100px;
+    height: auto;
+    margin: 0 20px 0 15px; /* Mantém margens laterais */
+    padding: 0;
+    opacity: 0.9;
+    filter: drop-shadow(2px 2px 5px rgba(0, 0, 0, 0.3));
+    transition: transform 0.2s ease-in-out;
+    transform: translateY(-5px);
 }
+
+.logo:hover {
+    transform: scale(1.05); 
+    opacity: 1;
+}
+
+.login-btn {
+    background-color: transparent;
+    color: #0056b3;
+    border: 2px solid #0056b3;
+    padding: 8px 20px;
+    border-radius: 20px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+    margin-left: 15px;
+    text-decoration: none;
+    font-size: 0.9em;
+}
+
+.login-btn:hover {
+    background-color: #0056b3;
+    color: white;
+}
+
+
+
 
 
 
