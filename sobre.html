@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre - ClickPet</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="logoCachorroSemFundo.png">
+    <style>
+        /* Botão Login */
+        .login-btn {
+            background-color: transparent;
+            color: #0056b3;
+            border: 2px solid #0056b3;
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            margin-left: 15px;
+            text-decoration: none;
+            font-size: 0.9em;
+        }
+
+        .login-btn:hover {
+            background-color: #0056b3;
+            color: white;
+        }
+
+        /* Ajuste no header-container para incluir o botão */
+        .header-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 15px 5%;
+            background-color: white;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            position: relative;
+            /* Adicionado para melhor posicionamento */
+        }
+
+        /* Estilos adicionais específicos para a página Sobre */
+        .sobre-container {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 5%;
+        }
+
+        .sobre-content {
+            background-color: white;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .sobre-content h2 {
+            color: #0056b3;
+            font-size: 1.8em;
+            margin-top: 0;
+            margin-bottom: 20px;
+        }
+
+        .sobre-content p {
+            line-height: 1.6;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .missao-visao {
+            display: flex;
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        .missao,
+        .visao {
+            flex: 1;
+            background-color: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        .missao h3,
+        .visao h3 {
+            color: #0056b3;
+            border-bottom: 2px solid #0056b3;
+            padding-bottom: 10px;
+        }
+
+        @media (max-width: 768px) {
+            .missao-visao {
+                flex-direction: column;
+            }
+        }
+
+        /* Estilos adicionais específicos para o rodapé */
+
+        footer {
+            background-color: #0056b3;
+            color: white;
+            padding: 40px 5%;
+            margin-top: 50px;
+        }
+
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+        }
+
+        .footer-logo {
+            font-size: 1.8em;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+
+        .footer-section h3 {
+            font-size: 1.2em;
+            margin-bottom: 20px;
+            border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+            padding-bottom: 10px;
+        }
+
+        .footer-section ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .footer-section li {
+            margin-bottom: 10px;
+        }
+
+        .footer-section a {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-section a:hover {
+            color: white;
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 15px;
+            margin-top: 15px;
+        }
+
+        .social-icons a {
+            color: white;
+            font-size: 1.5em;
+        }
+
+        .copyright {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="header-container">
+            <h1>ClickPet</h1>
+            <form class="search-bar">
+                <input type="text" placeholder="O que seu pet precisa?" />
+                <button type="submit">🔍</button>
+            </form>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#sobre">Sobre</a></li>
+                    <li><a href="#servicos">Serviços</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+            </nav>
+            <a href="login.html" class="login-btn">Login</a>
+        </div>
+    </header>
+
+    <main>
+        <section id="sobre" class="sobre-container">
+            <div class="sobre-content">
+                <h2>Sobre a ClickPet</h2>
+                <p>Bem-vindo à ClickPet, sua plataforma completa para cuidar do seu animal de estimação com amor e
+                    dedicação. Fundada em 2020, nossa missão é conectar tutores de pets aos melhores serviços e produtos
+                    para garantir o bem-estar dos seus companheiros.</p>
+
+                <p>Nossa equipe é formada por amantes de animais e profissionais qualificados que entendem as
+                    necessidades especiais de cada pet. Acreditamos que todos os animais merecem cuidados de qualidade e
+                    estamos aqui para facilitar o acesso a esses serviços.</p>
+
+                <div class="missao-visao">
+                    <div class="missao">
+                        <h3>Nossa Missão</h3>
+                        <p>Facilitar o acesso a produtos e serviços de qualidade para pets, promovendo seu bem-estar e
+                            fortalecendo o vínculo entre animais e seus tutores através de soluções práticas e
+                            confiáveis.</p>
+                    </div>
+                    <div class="visao">
+                        <h3>Nossa Visão</h3>
+                        <p>Ser a plataforma líder em soluções para pets na América Latina, reconhecida pela excelência
+                            no atendimento, qualidade dos serviços e compromisso com o bem-estar animal.</p>
+                    </div>
+                </div>
+                <div class="missao-visao">
+                    <div class="missao">
+                        <h3>Nossos valores</h3>
+                        <p>Na ClickPet, nossos valores são o coração de tudo o que fazemos. Guiados pelo amor
+                            incondicional pelos animais, acreditamos que cada pet merece cuidado, respeito e uma vida
+                            plena ao lado de seus tutores. Nossa busca pela excelência em produtos e serviços é
+                            constante, porque sabemos que os animais merecem apenas o melhor. Agimos sempre com
+                            transparência e ética, construindo relações de confiança com clientes, parceiros e
+                            colaboradores. A inovação está em nosso DNA, mas sempre com propósito: desenvolver soluções
+                            que realmente melhorem a vida dos pets e de quem os ama. Assumimos nossa responsabilidade
+                            socioambiental, apoiando causas animais e adotando práticas sustentáveis em todas as nossas
+                            ações. Celebramos a diversidade, acolhendo todos os pets e seus tutores com igualdade e
+                            respeito, porque cada relação especial entre humanos e animais é única. E, acima de tudo,
+                            acreditamos no poder da educação continuada, promovendo conhecimento sobre posse responsável
+                            e cuidados animais para construir um futuro onde todos os pets sejam felizes e bem cuidados.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <div class="footer-logo">ClickPet</div>
+                <p>Cuidando do seu pet com amor e dedicação desde 2025.</p>
+            </div>
+
+            <div class="footer-section">
+                <h3>Links Rápidos</h3>
+                <ul>
+                    <li><a href="#sobre">Sobre Nós</a></li>
+                    <li><a href="#servicos">Nossos Serviços</a></li>
+                    <li><a href="#faq">Perguntas Frequentes</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Serviços</h3>
+                <ul>
+                    <li><a href="#veterinario">Veterinário</a></li>
+                    <li><a href="#petshop">Pet Shop</a></li>
+                    <li><a href="#adocao">Adoção</a></li>
+                    <li><a href="#hotel">Hotel para Pets</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Contato</h3>
+                <ul>
+                    <li>📞 (99) 99999-9999</li>
+                    <li>✉️ contato@clickpet.com.br</li>
+                    <li>📍 Curitiba, Brasil</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="copyright">
+            &copy; 2023 ClickPet. Todos os direitos reservados.
+        </div>
+    </footer>
+</body>
+
+</html>

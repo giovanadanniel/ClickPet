@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Serviços - ClickPet</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="logoCachorroSemFundo.png">
+    <style>
+        /* Botão Login */
+        .login-btn {
+            background-color: transparent;
+            color: #0056b3;
+            border: 2px solid #0056b3;
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            margin-left: 15px;
+            text-decoration: none;
+            font-size: 0.9em;
+        }
+
+        .login-btn:hover {
+            background-color: #0056b3;
+            color: white;
+        }
+
+        /* Estilos específicos para a página de serviços */
+        .servicos-container {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 5%;
+        }
+
+        .servico {
+            display: flex;
+            align-items: center;
+            margin-bottom: 60px;
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .servico-imagem {
+            flex: 1;
+            min-height: 300px;
+            background-size: cover;
+            background-position: center;
+            border-radius: 12px;
+            margin: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+
+        .servico-conteudo {
+            flex: 1;
+            padding: 30px;
+        }
+
+        .servico h2 {
+            color: #0056b3;
+            margin-top: 0;
+            font-size: 1.8em;
+        }
+
+        .servico p {
+            line-height: 1.6;
+            color: #333;
+        }
+
+        /* Alterna a posição da imagem para serviços pares */
+        .servico:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+
+        @media (max-width: 768px) {
+            .servico {
+                flex-direction: column;
+            }
+
+            .servico:nth-child(even) {
+                flex-direction: column;
+            }
+
+            .servico-imagem {
+                width: 100%;
+                min-height: 200px;
+            }
+        }
+
+        /* Estilos adicionais específicos para o rodapé */
+
+        footer {
+            background-color: #0056b3;
+            color: white;
+            padding: 40px 5%;
+            margin-top: 50px;
+        }
+
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+        }
+
+        .footer-logo {
+            font-size: 1.8em;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+
+        .footer-section h3 {
+            font-size: 1.2em;
+            margin-bottom: 20px;
+            border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+            padding-bottom: 10px;
+        }
+
+        .footer-section ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .footer-section li {
+            margin-bottom: 10px;
+        }
+
+        .footer-section a {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-section a:hover {
+            color: white;
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 15px;
+            margin-top: 15px;
+        }
+
+        .social-icons a {
+            color: white;
+            font-size: 1.5em;
+        }
+
+        .copyright {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 0.9em;
+        }
+
+        .btn-reserva {
+            background-color: #0056b3;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1em;
+            transition: all 0.3s;
+            margin-top: 20px;
+            display: inline-block;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .btn-reserva:hover {
+            background-color: #003d82;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="header-container">
+            <h1>ClickPet</h1>
+            <form class="search-bar">
+                <input type="text" placeholder="O que seu pet precisa?" />
+                <button type="submit">🔍</button>
+            </form>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="sobre.html">Sobre</a></li>
+                    <li><a href="servicos.html">Serviços</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                </ul>
+            </nav>
+            <a href="login.html" class="login-btn">Login</a>
+        </div>
+    </header>
+
+    <main class="servicos-container">
+        <h1 style="text-align: center; margin-bottom: 50px; color: #0056b3;">Nossos Serviços</h1>
+
+        <!-- Serviço 1 - Banho -->
+        <div class="servico">
+            <div class="servico-imagem" style="background-image: url('cachorro.png');"></div>
+            <div class="servico-conteudo">
+                <h2>Banho Completo</h2>
+                <p>No banho oferecemos um tratamento completo para seu pet, utilizando produtos hipoalergênicos de alta
+                    qualidade. Nosso processo inclui:</p>
+                <ul>
+                    <li>Pré-lavagem com escovação</li>
+                    <li>Banho com shampoo específico para o tipo de pelagem</li>
+                    <li>Hidratação com condicionador</li>
+                    <li>Secagem com toalhas macias e secador em temperatura adequada</li>
+                    <li>Limpeza de ouvidos e corte de unhas</li>
+                </ul>
+                <p>Deixe seu pet limpo, cheiroso e feliz com nosso serviço especializado!</p>
+                <a href="reserva.html?servico=banho" class="btn-reserva">Reserve Já</a>
+            </div>
+        </div>
+
+        <!-- Serviço 2 - Tosa -->
+        <div class="servico">
+            <div class="servico-imagem" style="background-image: url('cachorroTosa.png');"></div>
+            <div class="servico-conteudo">
+                <h2>Tosa Higiênica</h2>
+                <p>Tosa higiênica profissional para seu pet, realizada por especialistas em cuidados com pelagem animal.
+                </p>
+                <ul>
+                    <li>Tosa na região genital para maior higiene</li>
+                    <li>Aparação das patinhas</li>
+                    <li>Limpeza da região anal</li>
+                    <li>Ajuste de pelos faciais</li>
+                    <li>Opção de tosa completa ou modelada</li>
+                </ul>
+                <p>Mantenha seu pet confortável durante todo o ano!</p>
+                <a href="reserva.html?servico=tosa" class="btn-reserva">Reserve Já</a>
+            </div>
+        </div>
+
+        <!-- Serviço 3 - Veterinário -->
+        <div class="servico">
+            <div class="servico-imagem" style="background-image: url('cachorroConsulta.png');"></div>
+            <div class="servico-conteudo">
+                <h2>Consulta Veterinária</h2>
+                <p>Serviço completo de saúde animal com profissionais qualificados.</p>
+                <ul>
+                    <li>Consultas de rotina e check-ups</li>
+                    <li>Vacinação e vermifugação</li>
+                    <li>Exames laboratoriais</li>
+                    <li>Atendimento emergencial</li>
+                    <li>Acompanhamento pós-operatório</li>
+                </ul>
+                <p>Cuide da saúde do seu companheiro com nossos especialistas!</p>
+                <a href="reserva.html?servico=veterinario" class="btn-reserva">Reserve Já</a>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <div class="footer-logo">ClickPet</div>
+                <p>Cuidando do seu pet com amor e dedicação desde 2025.</p>
+            </div>
+
+            <div class="footer-section">
+                <h3>Links Rápidos</h3>
+                <ul>
+                    <li><a href="#sobre">Sobre Nós</a></li>
+                    <li><a href="#servicos">Nossos Serviços</a></li>
+                    <li><a href="#faq">Perguntas Frequentes</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Serviços</h3>
+                <ul>
+                    <li><a href="#veterinario">Veterinário</a></li>
+                    <li><a href="#petshop">Pet Shop</a></li>
+                    <li><a href="#adocao">Adoção</a></li>
+                    <li><a href="#hotel">Hotel para Pets</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Contato</h3>
+                <ul>
+                    <li>📞 (99) 99999-9999</li>
+                    <li>✉️ contato@clickpet.com.br</li>
+                    <li>📍 Curitiba, Brasil</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="copyright">
+            &copy; 2023 ClickPet. Todos os direitos reservados.
+        </div>
+    </footer>
+</body>
+
+</html>

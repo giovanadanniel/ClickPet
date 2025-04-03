@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato - ClickPet</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="logoCachorroSemFundo.png">
+    <style>
+        /* Botão Login */
+        .login-btn {
+            background-color: transparent;
+            color: #0056b3;
+            border: 2px solid #0056b3;
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            margin-left: 15px;
+            text-decoration: none;
+            font-size: 0.9em;
+        }
+
+        .login-btn:hover {
+            background-color: #0056b3;
+            color: white;
+        }
+
+        /* Estilos específicos para a página de contato */
+        .contato-container {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 5%;
+        }
+
+        .contato-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 50px;
+        }
+
+        .info-contato {
+            background-color: white;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .info-contato h2 {
+            color: #0056b3;
+            margin-top: 0;
+            font-size: 1.8em;
+            border-bottom: 2px solid #f0f0f0;
+            padding-bottom: 15px;
+        }
+
+        .contato-item {
+            margin-bottom: 20px;
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+        }
+
+        .contato-item i {
+            font-size: 1.5em;
+            color: #0056b3;
+            margin-top: 3px;
+        }
+
+        .contato-text h3 {
+            margin: 0 0 5px 0;
+            color: #333;
+        }
+
+        .contato-text p {
+            margin: 0;
+            color: #666;
+        }
+
+        .mapa {
+            height: 100%;
+            min-height: 300px;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .mapa iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        @media (max-width: 768px) {
+            .mapa {
+                min-height: 250px;
+            }
+        }
+
+        /* Rodapé (mesmo estilo das outras páginas) */
+        footer {
+            background-color: #0056b3;
+            color: white;
+            padding: 40px 5%;
+            margin-top: 50px;
+        }
+
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+        }
+
+        .footer-logo {
+            font-size: 1.8em;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+
+        .footer-section h3 {
+            font-size: 1.2em;
+            margin-bottom: 20px;
+            border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+            padding-bottom: 10px;
+        }
+
+        .footer-section ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .footer-section li {
+            margin-bottom: 10px;
+        }
+
+        .footer-section a {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-section a:hover {
+            color: white;
+        }
+
+        .copyright {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="header-container">
+            <h1>ClickPet</h1>
+            <form class="search-bar">
+                <input type="text" placeholder="O que seu pet precisa?" />
+                <button type="submit">🔍</button>
+            </form>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="sobre.html">Sobre</a></li>
+                    <li><a href="servicos.html">Serviços</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                </ul>
+            </nav>
+            <a href="login.html" class="login-btn">Login</a>
+        </div>
+    </header>
+
+    <main class="contato-container">
+        <h1 style="text-align: center; margin-bottom: 50px; color: #0056b3;">Entre em Contato</h1>
+
+        <div class="contato-content">
+            <div class="info-contato">
+                <h2>Informações de Contato</h2>
+
+                <div class="contato-item">
+                    <i>📍</i>
+                    <div class="contato-text">
+                        <h3>Endereço</h3>
+                        <p>Rua dos Animais, 123 - Bairro Pet<br>Curitiba - PR, 80000-000</p>
+                    </div>
+                </div>
+
+                <div class="contato-item">
+                    <i>📞</i>
+                    <div class="contato-text">
+                        <h3>Telefone</h3>
+                        <p>(41) 9999-9999<br>(41) 8888-8888 (WhatsApp)</p>
+                    </div>
+                </div>
+
+                <div class="contato-item">
+                    <i>✉️</i>
+                    <div class="contato-text">
+                        <h3>Email</h3>
+                        <p>contato@clickpet.com.br<br>sac@clickpet.com.br</p>
+                    </div>
+                </div>
+
+                <div class="contato-item">
+                    <i>⏰</i>
+                    <div class="contato-text">
+                        <h3>Horário de Funcionamento</h3>
+                        <p>Segunda a Sexta: 8h às 18h<br>Sábado: 9h às 13h<br>Domingo: Fechado</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mapa">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3603.073392715155!2d-49.2695201!3d-25.4288547!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94dce4135a3a9345%3A0xbbb86cb5be4b4b3b!2sMaph%20Hotel!5e0!3m2!1spt-BR!2sbr!4v1712164549103!5m2!1spt-BR!2sbr"></iframe>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <div class="footer-logo">ClickPet</div>
+                <p>Cuidando do seu pet com amor e dedicação desde 2025.</p>
+            </div>
+
+            <div class="footer-section">
+                <h3>Links Rápidos</h3>
+                <ul>
+                    <li><a href="sobre.html">Sobre Nós</a></li>
+                    <li><a href="servicos.html">Nossos Serviços</a></li>
+                    <li><a href="#faq">Perguntas Frequentes</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Serviços</h3>
+                <ul>
+                    <li><a href="#veterinario">Veterinário</a></li>
+                    <li><a href="#petshop">Pet Shop</a></li>
+                    <li><a href="#adocao">Adoção</a></li>
+                    <li><a href="#hotel">Hotel para Pets</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Contato</h3>
+                <ul>
+                    <li>📞 (41) 9999-9999</li>
+                    <li>✉️ contato@clickpet.com.br</li>
+                    <li>📍 Curitiba, Brasil</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="copyright">
+            &copy; 2023 ClickPet. Todos os direitos reservados.
+        </div>
+    </footer>
+</body>
+
+</html>
