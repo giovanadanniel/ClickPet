@@ -78,5 +78,14 @@ nav ul li a:hover {
     color: #0056b3;
 }
 
+.logo {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    width: 100px;
+    z-index: 1000;
+}
+
+
 
 
