@@ -855,6 +855,165 @@ footer {
     color: white;
 }
 
+.register-page {
+    display: flex;
+    min-height: calc(100vh - 70px);
+    background-color: #f8f9fa;
+}
+
+.register-hero {
+    flex: 1;
+    background: linear-gradient(rgba(0, 86, 179, 0.8), rgba(0, 86, 179, 0.6)),
+        url('images/ambienteEntrada.webp') center/cover no-repeat;
+    display: none;
+}
+
+.register-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 5%;
+    min-height: calc(100vh - 70px);
+}
+
+.register-form-container {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+    width: 100%;
+    max-width: 450px;
+    text-align: center;
+}
+
+.register-form-container h1 {
+    color: #0056b3;
+    margin-bottom: 30px;
+    font-size: 2em;
+}
+
+.register-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.form-group {
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: #333;
+    font-weight: 500;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1em;
+    transition: border-color 0.3s;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: #0056b3;
+}
+
+.register-btn {
+    background-color: #0056b3;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 5px;
+    font-size: 1em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+    margin-top: 15px;
+}
+
+.register-btn:hover {
+    background-color: #003d82;
+}
+
+.register-options {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.register-options a {
+    color: #0056b3;
+    text-decoration: none;
+    font-size: 0.9em;
+    transition: color 0.3s;
+}
+
+.register-options a:hover {
+    text-decoration: underline;
+}
+
+.error-message {
+    color: #e74c3c;
+    font-size: 0.8em;
+    margin-top: 5px;
+    display: none;
+}
+
+.input-error {
+    border-color: #e74c3c !important;
+}
+
+.input-success {
+    border-color: #2ecc71 !important;
+}
+
+.password-strength {
+    margin-top: 5px;
+    height: 5px;
+    background-color: #eee;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.password-strength-bar {
+    height: 100%;
+    width: 0;
+    transition: width 0.3s, background-color 0.3s;
+}
+
+.password-requirements {
+    font-size: 0.8em;
+    color: #666;
+    margin-top: 5px;
+    text-align: left;
+}
+
+.requirement {
+    display: flex;
+    align-items: center;
+    margin-bottom: 3px;
+}
+
+.requirement-icon {
+    margin-right: 5px;
+    font-size: 0.9em;
+}
+
+.requirement-met {
+    color: #2ecc71;
+}
+
+.requirement-not-met {
+    color: #e74c3c;
+}
+
 @media (max-width: 768px) {
     .missao-visao {
         flex-direction: column;
@@ -911,6 +1070,29 @@ footer {
 
 @media (min-width: 992px) {
     .login-hero {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 40px;
+    }
+
+    .hero-content {
+        max-width: 500px;
+        color: white;
+        text-align: center;
+    }
+
+    .hero-content h2 {
+        font-size: 2em;
+        margin-bottom: 20px;
+    }
+
+    .hero-content p {
+        font-size: 1.1em;
+        line-height: 1.6;
+    }
+
+    .register-hero {
         display: flex;
         justify-content: center;
         align-items: center;
