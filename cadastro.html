@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ClickPet - Cadastre-se</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="images/logoCachorroSemFundo.png">
+    <style>
+        /* Estilos específicos para a página de cadastro */
+        .register-page {
+            display: flex;
+            min-height: calc(100vh - 70px);
+            background-color: #f8f9fa;
+        }
+
+        .register-hero {
+            flex: 1;
+            background: linear-gradient(rgba(0, 86, 179, 0.8), rgba(0, 86, 179, 0.6)),
+                url('images/ambienteEntrada.webp') center/cover no-repeat;
+            display: none;
+        }
+
+        .register-container {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 40px 5%;
+            min-height: calc(100vh - 70px);
+        }
+
+        .register-form-container {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+            padding: 40px;
+            width: 100%;
+            max-width: 450px;
+            text-align: center;
+        }
+
+        .register-form-container h1 {
+            color: #0056b3;
+            margin-bottom: 30px;
+            font-size: 2em;
+        }
+
+        .register-form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .form-group {
+            text-align: left;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            color: #333;
+            font-weight: 500;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1em;
+            transition: border-color 0.3s;
+        }
+
+        .form-group input:focus {
+            outline: none;
+            border-color: #0056b3;
+        }
+
+        .register-btn {
+            background-color: #0056b3;
+            color: white;
+            border: none;
+            padding: 12px;
+            border-radius: 5px;
+            font-size: 1em;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            margin-top: 15px;
+        }
+
+        .register-btn:hover {
+            background-color: #003d82;
+        }
+
+        .register-options {
+            margin-top: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .register-options a {
+            color: #0056b3;
+            text-decoration: none;
+            font-size: 0.9em;
+            transition: color 0.3s;
+        }
+
+        .register-options a:hover {
+            text-decoration: underline;
+        }
+
+        /* Estilos para validação */
+        .error-message {
+            color: #e74c3c;
+            font-size: 0.8em;
+            margin-top: 5px;
+            display: none;
+        }
+
+        .input-error {
+            border-color: #e74c3c !important;
+        }
+
+        .input-success {
+            border-color: #2ecc71 !important;
+        }
+
+        .password-strength {
+            margin-top: 5px;
+            height: 5px;
+            background-color: #eee;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+
+        .password-strength-bar {
+            height: 100%;
+            width: 0;
+            transition: width 0.3s, background-color 0.3s;
+        }
+
+        .password-requirements {
+            font-size: 0.8em;
+            color: #666;
+            margin-top: 5px;
+            text-align: left;
+        }
+
+        .requirement {
+            display: flex;
+            align-items: center;
+            margin-bottom: 3px;
+        }
+
+        .requirement-icon {
+            margin-right: 5px;
+            font-size: 0.9em;
+        }
+
+        .requirement-met {
+            color: #2ecc71;
+        }
+
+        .requirement-not-met {
+            color: #e74c3c;
+        }
+
+        @media (min-width: 992px) {
+            .register-hero {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 40px;
+            }
+
+            .hero-content {
+                max-width: 500px;
+                color: white;
+                text-align: center;
+            }
+
+            .hero-content h2 {
+                font-size: 2em;
+                margin-bottom: 20px;
+            }
+
+            .hero-content p {
+                font-size: 1.1em;
+                line-height: 1.6;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="header-container">
+            <img src="images/logoSemFundo.png" alt="ClickPet Logo" class="logo">
+            <div class="search-container"></div>
+            <form class="search-bar">
+                <input type="text" placeholder="O que seu pet precisa?" />
+                <button type="submit">🔍</button>
+            </form>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="sobre.html">Sobre</a></li>
+                    <li><a href="servico.html">Serviços</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                </ul>
+            </nav>
+            <a href="login.html" class="login-btn">Login</a>
+        </div>
+    </header>
+
+    <div class="register-page">
+        <div class="register-hero">
+            <div class="hero-content">
+                <h2>Junte-se à família ClickPet</h2>
+                <p>Crie sua conta para acessar todos os nossos serviços e benefícios exclusivos para seu pet.</p>
+            </div>
+        </div>
+        <div class="register-container">
+            <div class="register-form-container">
+                <h1>Crie sua conta</h1>
+                <form class="register-form" id="registerForm">
+                    <div class="form-group">
+                        <label for="nome">Nome Completo</label>
+                        <input type="text" id="nome" placeholder="Digite seu nome completo" required>
+                        <div class="error-message" id="nomeError">Por favor, insira seu nome completo</div>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">E-mail</label>
+                        <input type="email" id="email" placeholder="Digite seu e-mail" required>
+                        <div class="error-message" id="emailError">Por favor, insira um e-mail válido</div>
+                    </div>
+                    <div class="form-group">
+                        <label for="telefone">Telefone</label>
+                        <input type="tel" id="telefone" placeholder="(00) 0 0000-0000" maxlength="16">
+                        <div class="error-message" id="telefoneError">Por favor, insira um telefone válido (ex: (99) 9
+                            9999-9999)</div>
+                    </div>
+                    <div class="form-group">
+                        <label for="senha">Senha</label>
+                        <input type="password" id="senha" placeholder="Crie uma senha" required>
+                        <div class="password-strength">
+                            <div class="password-strength-bar" id="passwordStrengthBar"></div>
+                        </div>
+                        <div class="password-requirements">
+                            <div class="requirement">
+                                <span class="requirement-icon" id="lengthIcon">✗</span>
+                                <span>Mínimo 8 caracteres</span>
+                            </div>
+                            <div class="requirement">
+                                <span class="requirement-icon" id="numberIcon">✗</span>
+                                <span>Pelo menos 1 número</span>
+                            </div>
+                            <div class="requirement">
+                                <span class="requirement-icon" id="specialIcon">✗</span>
+                                <span>Pelo menos 1 caractere especial</span>
+                            </div>
+                        </div>
+                        <div class="error-message" id="senhaError">A senha não atende aos requisitos</div>
+                    </div>
+                    <div class="form-group">
+                        <label for="confirmar-senha">Confirmar Senha</label>
+                        <input type="password" id="confirmar-senha" placeholder="Confirme sua senha" required>
+                        <div class="error-message" id="confirmarSenhaError">As senhas não coincidem</div>
+                    </div>
+                    <button type="submit" class="register-btn">Cadastrar</button>
+                </form>
+
+                <div class="register-options">
+                    <p>Já tem uma conta? <a href="login.html">Faça login</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer style="margin-top: 0 !important;">
+        <div class="footer-container">
+            <div class="footer-section">
+                <div class="footer-logo">ClickPet</div>
+                <p>Cuidando do seu pet com amor e dedicação desde 2025.</p>
+            </div>
+
+            <div class="footer-section">
+                <h3>Links Rápidos</h3>
+                <ul>
+                    <li><a href="sobre.html">Sobre Nós</a></li>
+                    <li><a href="servico.html">Nossos Serviços</a></li>
+                    <li><a href="faq.html">Perguntas Frequentes</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Contato</h3>
+                <ul>
+                    <li>📞 (99) 99999-9999</li>
+                    <li>✉️ contato@clickpet.com.br</li>
+                    <li>📍 Curitiba, Brasil</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="copyright">
+            &copy; 2023 ClickPet. Todos os direitos reservados.
+        </div>
+    </footer>
+
+    <script>
+        // Máscara para telefone celular brasileiro com 9 dígitos: (00) 0 0000-0000
+        document.getElementById('telefone').addEventListener('input', function (e) {
+            let x = e.target.value.replace(/\D/g, '').match(/(\d{0,2})(\d{0,1})(\d{0,4})(\d{0,4})/);
+            e.target.value = !x[2] ? x[1] : '(' + x[1] + ') ' + x[2] + (x[3] ? ' ' + x[3] + (x[4] ? '-' + x[4] : '') : '');
+        });
+
+        // Função de validação do telefone
+        function validatePhone(phone) {
+            const re = /^\(\d{2}\) \d \d{4}-\d{4}$/;
+            return re.test(phone);
+        }
+
+        // Validação de e-mail
+        function validateEmail(email) {
+            const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            return re.test(email);
+        }
+
+        // Validação de senha
+        function checkPasswordStrength(password) {
+            let strength = 0;
+
+            // Verifica o comprimento
+            if (password.length >= 8) strength++;
+
+            // Verifica se tem números
+            if (/\d/.test(password)) strength++;
+
+            // Verifica se tem caracteres especiais
+            if (/[!@#$%^&*(),.?":{}|<>]/.test(password)) strength++;
+
+            // Verifica se tem letras maiúsculas
+            if (/[A-Z]/.test(password)) strength++;
+
+            return strength;
+        }
+
+        // Atualiza a barra de força da senha
+        document.getElementById('senha').addEventListener('input', function (e) {
+            const password = e.target.value;
+            const strength = checkPasswordStrength(password);
+            const strengthBar = document.getElementById('passwordStrengthBar');
+
+            // Atualiza a barra de força
+            if (password.length === 0) {
+                strengthBar.style.width = '0%';
+                strengthBar.style.backgroundColor = '#eee';
+            } else {
+                const width = (strength / 4) * 100;
+                strengthBar.style.width = width + '%';
+
+                if (strength <= 1) {
+                    strengthBar.style.backgroundColor = '#e74c3c'; // Vermelho
+                } else if (strength === 2) {
+                    strengthBar.style.backgroundColor = '#f39c12'; // Laranja
+                } else if (strength === 3) {
+                    strengthBar.style.backgroundColor = '#3498db'; // Azul
+                } else {
+                    strengthBar.style.backgroundColor = '#2ecc71'; // Verde
+                }
+            }
+
+            // Atualiza os ícones de requisitos
+            document.getElementById('lengthIcon').textContent = password.length >= 8 ? '✓' : '✗';
+            document.getElementById('lengthIcon').className = password.length >= 8 ? 'requirement-icon requirement-met' : 'requirement-icon requirement-not-met';
+
+            document.getElementById('numberIcon').textContent = /\d/.test(password) ? '✓' : '✗';
+            document.getElementById('numberIcon').className = /\d/.test(password) ? 'requirement-icon requirement-met' : 'requirement-icon requirement-not-met';
+
+            document.getElementById('specialIcon').textContent = /[!@#$%^&*(),.?":{}|<>]/.test(password) ? '✓' : '✗';
+            document.getElementById('specialIcon').className = /[!@#$%^&*(),.?":{}|<>]/.test(password) ? 'requirement-icon requirement-met' : 'requirement-icon requirement-not-met';
+        });
+
+        // Validação do formulário
+        document.getElementById('registerForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+            let isValid = true;
+
+            // Validação do nome
+            const nome = document.getElementById('nome').value;
+            const nomeError = document.getElementById('nomeError');
+            if (nome.trim() === '') {
+                nomeError.style.display = 'block';
+                document.getElementById('nome').classList.add('input-error');
+                isValid = false;
+            } else {
+                nomeError.style.display = 'none';
+                document.getElementById('nome').classList.remove('input-error');
+            }
+
+            // Validação do e-mail
+            const email = document.getElementById('email').value;
+            const emailError = document.getElementById('emailError');
+            if (!validateEmail(email)) {
+                emailError.style.display = 'block';
+                document.getElementById('email').classList.add('input-error');
+                isValid = false;
+            } else {
+                emailError.style.display = 'none';
+                document.getElementById('email').classList.remove('input-error');
+            }
+
+            // Validação da senha
+            const senha = document.getElementById('senha').value;
+            const senhaError = document.getElementById('senhaError');
+            if (checkPasswordStrength(senha) < 3) { // Requer pelo menos 3 dos 4 critérios
+                senhaError.style.display = 'block';
+                document.getElementById('senha').classList.add('input-error');
+                isValid = false;
+            } else {
+                senhaError.style.display = 'none';
+                document.getElementById('senha').classList.remove('input-error');
+            }
+
+            // Validação de confirmação de senha
+            const confirmarSenha = document.getElementById('confirmar-senha').value;
+            const confirmarSenhaError = document.getElementById('confirmarSenhaError');
+            if (senha !== confirmarSenha) {
+                confirmarSenhaError.style.display = 'block';
+                document.getElementById('confirmar-senha').classList.add('input-error');
+                isValid = false;
+            } else {
+                confirmarSenhaError.style.display = 'none';
+                document.getElementById('confirmar-senha').classList.remove('input-error');
+            }
+
+            // Se tudo estiver válido, pode enviar o formulário
+            if (isValid) {
+                alert('Cadastro realizado com sucesso!');
+                // Aqui você pode adicionar o código para enviar o formulário
+                // this.submit();
+            }
+        });
+
+        // Validação em tempo real
+        document.querySelectorAll('#registerForm input').forEach(input => {
+            input.addEventListener('input', function () {
+                const errorElement = document.getElementById(this.id + 'Error');
+                if (errorElement) {
+                    errorElement.style.display = 'none';
+                    this.classList.remove('input-error');
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
