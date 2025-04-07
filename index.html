@@ -7,176 +7,6 @@
     <title>ClickPet - Home</title>
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/x-icon" href="images/logoCachorroSemFundo.png">
-    <style>
-        /* Estilos específicos para a home */
-        .hero {
-            background: linear-gradient(rgba(0, 86, 179, 0.8), rgba(0, 86, 179, 0.6)),
-                url('pet-hero.jpg') center/cover no-repeat;
-            height: 500px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            color: white;
-            padding: 0 5%;
-        }
-
-        .hero-content h1 {
-            font-size: 3em;
-            margin-bottom: 20px;
-            color: white;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-        }
-
-        .hero-content p {
-            font-size: 1.2em;
-            margin-bottom: 30px;
-            max-width: 700px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .btn-hero {
-            background-color: white;
-            color: #0056b3;
-            padding: 12px 30px;
-            border-radius: 30px;
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 1.1em;
-            transition: all 0.3s;
-            display: inline-block;
-        }
-
-        .btn-hero:hover {
-            background-color: #f0f0f0;
-            transform: translateY(-3px);
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-        }
-
-        .destaques {
-            padding: 60px 5%;
-            background-color: white;
-        }
-
-        .destaques-container {
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .destaques-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-            margin-top: 40px;
-        }
-
-        .destaque-card {
-            background-color: #f8f9fa;
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s;
-        }
-
-        .destaque-card:hover {
-            transform: translateY(-10px);
-        }
-
-        .destaque-img {
-            height: 200px;
-            background-size: cover;
-            background-position: center;
-        }
-
-        .destaque-content {
-            padding: 20px;
-        }
-
-        .destaque-content h3 {
-            color: #0056b3;
-            margin-top: 0;
-        }
-
-        .servicos-home {
-            padding: 60px 5%;
-            background-color: #f8f9fa;
-        }
-
-        .servicos-container {
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .servicos-home h2 {
-            text-align: center;
-            color: #0056b3;
-            margin-bottom: 40px;
-        }
-
-        .depoimentos {
-            padding: 60px 5%;
-            background-color: white;
-        }
-
-        .depoimentos-container {
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .depoimentos-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-            margin-top: 40px;
-        }
-
-        .depoimento-card {
-            background-color: #f8f9fa;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-        }
-
-        .depoimento-text {
-            font-style: italic;
-            margin-bottom: 20px;
-        }
-
-        .depoimento-autor {
-            font-weight: 600;
-            color: #0056b3;
-        }
-
-        .cta {
-            padding: 80px 5%;
-            background: linear-gradient(rgba(0, 86, 179, 0.9), rgba(0, 86, 179, 0.8)),
-                url('pet-cta.jpg') center/cover no-repeat;
-            text-align: center;
-            color: white;
-        }
-
-        .cta h2 {
-            font-size: 2.5em;
-            margin-bottom: 20px;
-        }
-
-        .cta p {
-            max-width: 700px;
-            margin: 0 auto 30px;
-            font-size: 1.1em;
-        }
-
-        @media (max-width: 768px) {
-            .hero {
-                height: 400px;
-            }
-
-            .hero-content h1 {
-                font-size: 2.2em;
-            }
-        }
-    </style>
 </head>
 
 <body>
@@ -212,11 +42,6 @@
         </section>
 
         <!-- Seção Destaques com Carrossel -->
-
-
-
-
-        <!-- Seção Destaques com Carrossel -->
         <section class="destaques">
             <div class="destaques-container">
                 <h2>Por que escolher a ClickPet?</h2>
@@ -228,7 +53,8 @@
                         <div class="carrossel-item">
                             <div class="destaques-grid">
                                 <div class="destaque-card">
-                                    <div class="destaque-img" style="background-image: url('pet-profissionais.jpg');">
+                                    <div class="destaque-img"
+                                        style="background-image: url('images/petProfissionais.jpg');">
                                     </div>
                                     <div class="destaque-content">
                                         <h3>Profissionais Qualificados</h3>
@@ -258,7 +84,8 @@
                         <div class="carrossel-item">
                             <div class="destaques-grid">
                                 <div class="destaque-card">
-                                    <div class="destaque-img" style="background-image: url('pet-higiene.jpg');"></div>
+                                    <div class="destaque-img"
+                                        style="background-image: url('images/clinicaAmbiente.jpg');"></div>
                                     <div class="destaque-content">
                                         <h3>Higiene Impecável</h3>
                                         <p>Nossos espaços são limpos e desinfetados constantemente, garantindo a saúde
@@ -266,7 +93,8 @@
                                     </div>
                                 </div>
                                 <div class="destaque-card">
-                                    <div class="destaque-img" style="background-image: url('pet-atendimento.jpg');">
+                                    <div class="destaque-img"
+                                        style="background-image: url('images/ambienteEntrada.webp');">
                                     </div>
                                     <div class="destaque-content">
                                         <h3>Atendimento Personalizado</h3>
@@ -275,7 +103,8 @@
                                     </div>
                                 </div>
                                 <div class="destaque-card">
-                                    <div class="destaque-img" style="background-image: url('pet-localizacao.jpg');">
+                                    <div class="destaque-img"
+                                        style="background-image: url('images/fachadaPredio.webp');">
                                     </div>
                                     <div class="destaque-content">
                                         <h3>Localização Privilegiada</h3>
@@ -286,40 +115,9 @@
                         </div>
                     </div>
                     <button class="carrossel-btn next" onclick="moveCarrossel('destaquesCarrossel', 1)">❯</button>
-                    <div class="carrossel-indicadores" id="destaquesIndicadores">
-                        <!-- Indicadores... -->
-                        <div class="carrossel-indicadores" id="destaquesIndicadores">
-                            <span class="indicador ativo" onclick="goToSlide('destaquesCarrossel', 0)"></span>
-                            <span class="indicador" onclick="goToSlide('destaquesCarrossel', 1)"></span>
-                        </div>
-                    </div>
                 </div>
             </div>
         </section>
-
-
-
-
-
-        <!-- oooooooooooooooooo -->
-        <section class="destaques">
-            <div class="destaques-container">
-                <h2>Por que escolher a ClickPet?</h2>
-                <div class="carrossel-container">
-                    <div class="carrossel" id="destaquesCarrossel">
-
-                    </div>
-                    <button class="carrossel-btn prev" onclick="moveCarrossel('destaquesCarrossel', -1)">❮</button>
-                    <button class="carrossel-btn next" onclick="moveCarrossel('destaquesCarrossel', 1)">❯</button>
-                    <div class="carrossel-indicadores" id="destaquesIndicadores">
-                        <span class="indicador ativo" onclick="goToSlide('destaquesCarrossel', 0)"></span>
-                        <span class="indicador" onclick="goToSlide('destaquesCarrossel', 1)"></span>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Seção Serviços -->
         <section class="servicos-home">
             <div class="servicos-container">
                 <h2>Nossos Serviços</h2>
@@ -352,8 +150,6 @@
                 </div>
             </div>
         </section>
-
-        <!-- Seção Depoimentos com Carrossel -->
         <section class="depoimentos">
             <div class="depoimentos-container">
                 <h2>O que dizem sobre nós</h2>
@@ -419,16 +215,10 @@
                     </div>
                     <button class="carrossel-btn prev" onclick="moveCarrossel('depoimentosCarrossel', -1)">❮</button>
                     <button class="carrossel-btn next" onclick="moveCarrossel('depoimentosCarrossel', 1)">❯</button>
-                    <div class="carrossel-indicadores" id="depoimentosIndicadores">
-                        <span class="indicador ativo" onclick="goToSlide('depoimentosCarrossel', 0)"></span>
-                        <span class="indicador" onclick="goToSlide('depoimentosCarrossel', 1)"></span>
-                        <span class="indicador" onclick="goToSlide('depoimentosCarrossel', 2)"></span>
-                    </div>
                 </div>
             </div>
         </section>
     </main>
-
     <footer>
         <div class="footer-container">
             <div class="footer-section">
@@ -460,85 +250,121 @@
         </div>
     </footer>
     <script>
-        const carrosseis = {
-            destaquesCarrossel: {
-                currentIndex: 0,
-                totalSlides: document.querySelectorAll('#destaquesCarrossel .carrossel-item').length
-            },
-            depoimentosCarrossel: {
-                currentIndex: 0,
-                totalSlides: document.querySelectorAll('#depoimentosCarrossel .carrossel-item').length
+        document.addEventListener('DOMContentLoaded', function () {
+            const carrosseis = {
+                destaquesCarrossel: {
+                    element: document.getElementById('destaquesCarrossel'),
+                    slides: document.querySelectorAll('#destaquesCarrossel .carrossel-item'),
+                    currentIndex: 0,
+                    autoRotate: true,
+                    interval: 5000,
+                    slidesPerMove: 1 // Adicionado: quantos slides mover por vez
+                },
+                depoimentosCarrossel: {
+                    element: document.getElementById('depoimentosCarrossel'),
+                    slides: document.querySelectorAll('#depoimentosCarrossel .carrossel-item'),
+                    currentIndex: 0,
+                    autoRotate: true,
+                    interval: 6000,
+                    slidesPerMove: 1 // Adicionado: quantos slides mover por vez
+                }
+            };
+
+            function prepareInfiniteCarrossel(carrosselId) {
+                const carrossel = carrosseis[carrosselId];
+                const slides = carrossel.slides;
+
+                for (let i = 0; i < carrossel.slidesPerMove; i++) {
+                    const clone = slides[i].cloneNode(true);
+                    carrossel.element.appendChild(clone);
+                }
+
+                for (let i = slides.length - 1; i >= slides.length - carrossel.slidesPerMove; i--) {
+                    const clone = slides[i].cloneNode(true);
+                    carrossel.element.insertBefore(clone, slides[0]);
+                }
+
+                carrossel.slides = document.querySelectorAll(`#${carrosselId} .carrossel-item`);
+
+                carrossel.currentIndex = carrossel.slidesPerMove;
+                updateCarrosselPosition(carrosselId, false);
             }
-        };
 
-        // Inicializa os indicadores
-        function initIndicators() {
-            // Para o carrossel de destaques
-            const destaquesIndicators = document.querySelectorAll('#destaquesIndicadores .indicador');
-            destaquesIndicators.forEach((indicator, index) => {
-                indicator.addEventListener('click', () => {
-                    goToSlide('destaquesCarrossel', index);
+            function initCarrosseis() {
+                for (const carrosselId in carrosseis) {
+                    prepareInfiniteCarrossel(carrosselId);
+
+                    if (carrosseis[carrosselId].autoRotate) {
+                        startAutoRotation(carrosselId);
+                    }
+                }
+            }
+
+            function moveCarrossel(carrosselId, direction) {
+                const carrossel = carrosseis[carrosselId];
+                carrossel.currentIndex += (direction * carrossel.slidesPerMove);
+                updateCarrosselPosition(carrosselId);
+            }
+
+            function updateCarrosselPosition(carrosselId, animate = true) {
+                const carrossel = carrosseis[carrosselId];
+                const totalRealSlides = carrossel.slides.length - (2 * carrossel.slidesPerMove);
+
+                if (carrossel.currentIndex < carrossel.slidesPerMove) {
+                    setTimeout(() => {
+                        carrossel.element.style.transition = 'none';
+                        carrossel.currentIndex = totalRealSlides + carrossel.currentIndex;
+                        updateCarrosselPosition(carrosselId, false);
+                    }, 500);
+                } else if (carrossel.currentIndex >= carrossel.slides.length - carrossel.slidesPerMove) {
+                    setTimeout(() => {
+                        carrossel.element.style.transition = 'none';
+                        carrossel.currentIndex = carrossel.currentIndex - totalRealSlides;
+                        updateCarrosselPosition(carrosselId, false);
+                    }, 500);
+                }
+
+                carrossel.element.style.transition = animate ? `transform 0.5s ease-in-out` : 'none';
+
+                const transformValue = -carrossel.currentIndex * (100 / carrossel.slidesPerMove);
+                carrossel.element.style.transform = `translateX(${transformValue}%)`;
+            }
+
+            function startAutoRotation(carrosselId) {
+                const carrossel = carrosseis[carrosselId];
+                carrossel.intervalId = setInterval(() => {
+                    moveCarrossel(carrosselId, 1);
+                }, carrossel.interval);
+            }
+
+            function stopAutoRotation(carrosselId) {
+                const carrossel = carrosseis[carrosselId];
+                if (carrossel.intervalId) {
+                    clearInterval(carrossel.intervalId);
+                }
+            }
+
+            initCarrosseis();
+
+            document.querySelectorAll('.carrossel-btn.prev').forEach(btn => {
+                const carrosselId = btn.closest('.carrossel-container').querySelector('.carrossel').id;
+                btn.addEventListener('click', () => moveCarrossel(carrosselId, -1));
+            });
+
+            document.querySelectorAll('.carrossel-btn.next').forEach(btn => {
+                const carrosselId = btn.closest('.carrossel-container').querySelector('.carrossel').id;
+                btn.addEventListener('click', () => moveCarrossel(carrosselId, 1));
+            });
+
+            document.querySelectorAll('.carrossel-container').forEach(container => {
+                const carrosselId = container.querySelector('.carrossel').id;
+                container.addEventListener('mouseenter', () => stopAutoRotation(carrosselId));
+                container.addEventListener('mouseleave', () => {
+                    if (carrosseis[carrosselId].autoRotate) {
+                        startAutoRotation(carrosselId);
+                    }
                 });
             });
-
-            // Para o carrossel de depoimentos
-            const depoimentosIndicators = document.querySelectorAll('#depoimentosIndicadores .indicador');
-            depoimentosIndicators.forEach((indicator, index) => {
-                indicator.addEventListener('click', () => {
-                    goToSlide('depoimentosCarrossel', index);
-                });
-            });
-        }
-
-        // Função para mover o carrossel
-        function moveCarrossel(carrosselId, direction) {
-            const carrossel = carrosseis[carrosselId];
-            carrossel.currentIndex = (carrossel.currentIndex + direction + carrossel.totalSlides) % carrossel.totalSlides;
-            updateCarrossel(carrosselId);
-        }
-
-        // Função para ir para um slide específico
-        function goToSlide(carrosselId, index) {
-            const carrossel = carrosseis[carrosselId];
-            carrossel.currentIndex = index;
-            updateCarrossel(carrosselId);
-        }
-
-        // Atualiza a posição do carrossel e os indicadores
-        function updateCarrossel(carrosselId) {
-            const carrossel = carrosseis[carrosselId];
-            const element = document.getElementById(carrosselId);
-            const transformValue = -carrossel.currentIndex * 100;
-            element.style.transform = `translateX(${transformValue}%)`;
-
-            // Atualiza indicadores
-            const indicatorsContainer = carrosselId + 'Indicadores';
-            const indicators = document.querySelectorAll(`#${indicatorsContainer} .indicador`);
-
-            indicators.forEach((indicator, index) => {
-                indicator.classList.toggle('ativo', index === carrossel.currentIndex);
-            });
-        }
-
-        // Auto-rotacionar os carrosséis
-        function startAutoRotation() {
-            setInterval(() => {
-                moveCarrossel('destaquesCarrossel', 1);
-            }, 5000);
-
-            setInterval(() => {
-                moveCarrossel('depoimentosCarrossel', 1);
-            }, 6000);
-        }
-
-        // Inicializa tudo quando o DOM estiver carregado
-        document.addEventListener('DOMContentLoaded', () => {
-            initIndicators();
-            startAutoRotation();
-
-            // Garante que o primeiro indicador esteja ativo
-            updateCarrossel('destaquesCarrossel');
-            updateCarrossel('depoimentosCarrossel');
         });
     </script>
 </body>

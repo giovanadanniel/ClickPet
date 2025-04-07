@@ -487,6 +487,215 @@ footer {
     margin-bottom: 20px;
 }
 
+.hero {
+    background: linear-gradient(rgba(0, 86, 179, 0.8), rgba(0, 86, 179, 0.6)),
+        url('pet-hero.jpg') center/cover no-repeat;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    padding: 0 5%;
+}
+
+.hero-content h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.hero-content p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.btn-hero {
+    background-color: white;
+    color: #0056b3;
+    padding: 12px 30px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1em;
+    transition: all 0.3s;
+    display: inline-block;
+}
+
+.btn-hero:hover {
+    background-color: #f0f0f0;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.destaques {
+    padding: 60px 5%;
+    background-color: white;
+}
+
+.destaques-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.destaques-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.destaque-card {
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.destaque-card:hover {
+    transform: translateY(-10px);
+}
+
+.destaque-img {
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+}
+
+.destaque-content {
+    padding: 20px;
+}
+
+.destaque-content h3 {
+    color: #0056b3;
+    margin-top: 0;
+}
+
+.servicos-home {
+    padding: 60px 5%;
+    background-color: #f8f9fa;
+}
+
+.servicos-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.servicos-home h2 {
+    text-align: center;
+    color: #0056b3;
+    margin-bottom: 40px;
+}
+
+.depoimentos {
+    padding: 60px 5%;
+    background-color: white;
+}
+
+.depoimentos-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.depoimentos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.depoimento-card {
+    background-color: #f8f9fa;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.depoimento-text {
+    font-style: italic;
+    margin-bottom: 20px;
+}
+
+.depoimento-autor {
+    font-weight: 600;
+    color: #0056b3;
+}
+
+.cta {
+    padding: 80px 5%;
+    background: linear-gradient(rgba(0, 86, 179, 0.9), rgba(0, 86, 179, 0.8)),
+        url('pet-cta.jpg') center/cover no-repeat;
+    text-align: center;
+    color: white;
+}
+
+.cta h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.cta p {
+    max-width: 700px;
+    margin: 0 auto 30px;
+    font-size: 1.1em;
+}
+
+.carrossel {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    will-change: transform;
+}
+
+.carrossel-container {
+    position: relative;
+    max-width: 1200px;
+    margin: 40px auto 0;
+    overflow: hidden;
+    padding: 0 60px;
+}
+
+.carrossel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 86, 179, 0.7);
+    color: white;
+    border: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    font-size: 1.5em;
+    cursor: pointer;
+    z-index: 10;
+    transition: all 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.carrossel-btn.prev {
+    left: 0;
+}
+
+.carrossel-btn.next {
+    right: 0;
+}
+
+.carrossel-btn:hover {
+    background-color: #0056b3;
+    transform: translateY(-50%) scale(1.1);
+}
+
+.carrossel-item {
+    flex: 0 0 100%;
+    box-sizing: border-box;
+}
+
 @media (max-width: 768px) {
     .missao-visao {
         flex-direction: column;
@@ -530,5 +739,13 @@ footer {
 
     .faq-question {
         font-size: 1.1em;
+    }
+
+    .hero {
+        height: 400px;
+    }
+
+    .hero-content h1 {
+        font-size: 2.2em;
     }
 }
