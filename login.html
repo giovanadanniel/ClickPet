@@ -36,13 +36,6 @@
                 <h2>Bem-vindo de volta à ClickPet</h2>
                 <p>Acesse sua conta para agendar serviços, acompanhar o histórico do seu pet e muito mais.</p>
             </div>
-    <div class="auth-page">
-        
-        <!-- Tela de boas-vindas Login -->
-        <div id="welcome-login" class="welcome-screen active">
-            <h2>Que bom que você voltou! 🐾</h2>
-            <p>Faça login para agendar serviços para seu pet!</p>
-            <button id="entrar-btn" class="login-btn-link">Entrar</button>
         </div>
         <div class="login-container">
             <div class="login-form-container">
@@ -59,31 +52,11 @@
                     <button type="submit" class="login-btn-2">Entrar</button>
                 </form>
 
-        <!-- Formulário de Login -->
-        <div id="login-form-container" class="login-form-container" style="display: none;">
-            <h1>Login</h1>
-            <form class="login-form">
-                <div class="form-group">
-                    <label for="email">E-mail</label>
-                    <input type="email" id="email" placeholder="Digite seu e-mail" required>
+                <div class="login-options">
+                    <a href="#">Esqueceu sua senha?</a>
+                    <a href="cadastro.html">Não tem uma conta? Cadastre-se</a>
                 </div>
-                <div class="form-group">
-                    <label for="senha">Senha</label>
-                    <input type="password" id="senha" placeholder="Digite sua senha" required>
-                </div>
-                <button type="submit" class="login-btn-2">Entrar</button>
-            </form>
-            <div class="login-options">
-                <a href="#" id="signup-link">Não tem uma conta?</a>
-                <a href="#">Esqueceu sua senha?</a>
             </div>
-        </div>
-
-        <!-- Tela de boas-vindas Cadastro -->
-        <div id="welcome-signup" class="welcome-screen" style="display: none;">
-            <h2>Cadastre-se conosco e venha fazer parte, trazendo o melhor para o seu pet! 🐶</h2>
-            <p>Preencha suas informações e junte-se à nossa família.</p>
-            <a href="cadastro.html" class="signup-btn-link">Cadastrar</a>
         </div>
     </div>
 
@@ -117,23 +90,6 @@
             &copy; 2023 ClickPet. Todos os direitos reservados.
         </div>
     </footer>
-
-    <script>
-        // Adiciona a interação do botão "Entrar"
-        document.getElementById("entrar-btn").addEventListener("click", function() {
-            // Esconde a tela de boas-vindas
-            document.getElementById("welcome-login").style.display = "none";
-            // Exibe o formulário de login
-            document.getElementById("login-form-container").style.display = "block";
-        });
-
-        // Adiciona a interação do link "Não tem uma conta?"
-        document.getElementById('signup-link').addEventListener('click', function(e) {
-            e.preventDefault(); // Impede a navegação imediata
-            document.getElementById('welcome-signup').style.display = "block"; // Exibe a tela de boas-vindas de cadastro
-            document.getElementById('login-form-container').style.display = "none"; // Esconde o formulário de login
-        });
-    </script>
 </body>
 
 </html>
