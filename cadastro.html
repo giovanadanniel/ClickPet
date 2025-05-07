@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ClickPet - Cadastre-se</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <link rel="icon" type="image/x-icon" href="images/logoCachorroSemFundo.png">
 </head>
 
@@ -210,6 +211,13 @@
             if (nome.trim() === '') {
                 nomeError.style.display = 'block';
                 document.getElementById('nome').classList.add('input-error');
+                Swal.fire({
+            title: "Erro",
+            text: "O campo Nome é obrigatório!",
+            icon: "error",
+            background: "#121212",
+            color: "#ffffff"
+        });
                 isValid = false;
             } else {
                 nomeError.style.display = 'none';
@@ -222,6 +230,13 @@
             if (!validateEmail(email)) {
                 emailError.style.display = 'block';
                 document.getElementById('email').classList.add('input-error');
+                Swal.fire({
+            title: "Erro",
+            text: "Digite um email válido! Exemplo: nome@exemplo.com",
+            icon: "error",
+            background: "#121212",
+            color: "#ffffff"
+        });
                 isValid = false;
             } else {
                 emailError.style.display = 'none';
@@ -234,6 +249,13 @@
             if (checkPasswordStrength(senha) < 3) { // Requer pelo menos 3 dos 4 critérios
                 senhaError.style.display = 'block';
                 document.getElementById('senha').classList.add('input-error');
+                Swal.fire({
+            title: "Erro",
+            text: "A senha deve atender a pelo menos 3 dos 4 critérios de força!",
+            icon: "error",
+            background: "#121212",
+            color: "#ffffff"
+        });
                 isValid = false;
             } else {
                 senhaError.style.display = 'none';
@@ -246,6 +268,13 @@
             if (senha !== confirmarSenha) {
                 confirmarSenhaError.style.display = 'block';
                 document.getElementById('confirmar-senha').classList.add('input-error');
+                Swal.fire({
+            title: "Erro",
+            text: "As senhas não coincidem!",
+            icon: "error",
+            background: "#121212",
+            color: "#ffffff"
+        });
                 isValid = false;
             } else {
                 confirmarSenhaError.style.display = 'none';
@@ -254,11 +283,17 @@
 
             // Se tudo estiver válido, pode enviar o formulário
             if (isValid) {
-                alert('Cadastro realizado com sucesso!');
-                // Aqui você pode adicionar o código para enviar o formulário
-                // this.submit();
-            }
+        Swal.fire({
+            title: "Sucesso!",
+            text: "Cadastro realizado com sucesso!",
+            icon: "success",
+            background: "#121212",
+            color: "#ffffff"
+        }).then(() => {
+            
         });
+    }
+});
 
         // Validação em tempo real
         document.querySelectorAll('#registerForm input').forEach(input => {
