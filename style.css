@@ -199,6 +199,12 @@ nav ul li a:hover {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+.servico .btn-reserva {
+    padding: 10px 10px;
+    font-size: 1.1em;
+    border-radius: 8px;
+}
+
 .servico-conteudo {
     flex: 1;
     padding: 30px;
@@ -1114,4 +1120,96 @@ footer {
         font-size: 1.1em;
         line-height: 1.6;
     }
+
+    /* ...existing code... */
+
+/* ...existing code... */
+.reserva-container {
+    max-width: 500px;
+    margin: 40px auto;
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+    padding: 32px 24px;
+    box-sizing: border-box;
+}
+
+.reserva-container .title {
+    text-align: center;
+    color: #1381bc;
+    margin-bottom: 24px;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.reserva-form {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    padding: 24px 24px 24px 24px;
+}
+
+.reserva-form label {
+    font-weight: 500;
+    color: #333;
+    margin-bottom: 4px;
+    margin-top: 0;
+}
+
+.reserva-form input,
+.reserva-form select,
+.reserva-form textarea {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #283c4b;
+    border-radius: 8px;
+    font-size: 1rem;
+    background: #f7faf9;
+    transition: border 0.2s;
+    margin-bottom: 18px;
+    box-sizing: border-box;
+}
+
+.reserva-form input:focus,
+.reserva-form select:focus,
+.reserva-form textarea:focus {
+    border: 1.5px solid #3b9ec3;
+    outline: none;
+    background: #fff;
+}
+
+.reserva-form textarea {
+    resize: vertical;
+    min-height: 60px;
+    max-height: 180px;
+}
+
+.btn-reserva {
+    display: block;
+    width: 100%;
+    margin-top: 10px;
+    padding: 12px 0;
+    background: linear-gradient(90deg, #2c457b 60%, #5f8ac6 100%);
+    color: #fff;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.1s;
+    box-shadow: 0 2px 8px rgba(46, 203, 143, 0.08);
+}
+
+.btn-reserva:hover {
+    background: linear-gradient(90deg, #38508e 60%, #81c2ee 100%);
+    transform: translateY(-2px) scale(1.02);
+}
+
+/* Responsivo */
+@media (max-width: 600px) {
+    .reserva-container {
+        padding: 18px 6px;
+    }
+}
+
 }

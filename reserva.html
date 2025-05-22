@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reserva de Serviços - ClickPet</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="images/logoCachorroSemFundo.png">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <img src="images/logoSemFundo.png" alt="ClickPet Logo" class="logo">
+            <form class="search-bar">
+                <input type="text" placeholder="O que seu pet precisa?" />
+                <button type="submit">🔍</button>
+            </form>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="sobre.html">Sobre</a></li>
+                    <li><a href="servico.html">Serviços</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                </ul>
+            </nav>
+            <a href="login.html" class="login-btn">Login</a>
+        </div>
+    </header>
+
+    <main class="reserva-container">
+        <h1 class="title">Reserve um Serviço</h1>
+        <form class="reserva-form" action="#" method="POST">
+            <label for="servico">Escolha o serviço:</label>
+            <select id="servico" name="servico" required>
+                <option value="">Selecione...</option>
+                <option value="banho">Banho Completo</option>
+                <option value="tosa">Tosa Higiênica</option>
+                <option value="veterinario">Consulta Veterinária</option>
+            </select>
+
+            <label for="pet-nome">Nome do Pet:</label>
+            <input type="text" id="pet-nome" name="pet-nome" required placeholder="Ex: Rex">
+
+            <label for="data">Data do Agendamento:</label>
+            <input type="date" id="data" name="data" required>
+
+            <label for="hora">Horário:</label>
+            <input type="time" id="hora" name="hora" required>
+
+            <label for="observacoes">Observações:</label>
+            <textarea id="observacoes" name="observacoes" rows="3" placeholder="Ex: Pet agressivo, alergias, etc."></textarea>
+
+            <button type="submit" class="btn-reserva">Confirmar Reserva</button>
+        </form>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <div class="footer-logo">ClickPet</div>
+                <p>Cuidando do seu pet com amor e dedicação desde 2025.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Links Rápidos</h3>
+                <ul>
+                    <li><a href="sobre.html">Sobre Nós</a></li>
+                    <li><a href="servico.html">Nossos Serviços</a></li>
+                    <li><a href="faq.html">Perguntas Frequentes</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contato</h3>
+                <ul>
+                    <li>📞 (99) 99999-9999</li>
+                    <li>✉️ contato@clickpet.com.br</li>
+                    <li>📍 Curitiba, Brasil</li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            &copy; 2023 ClickPet. Todos os direitos reservados.
+        </div>
+    </footer>
+    <script>
+        window.addEventListener('DOMContentLoaded', function() {
+            const params = new URLSearchParams(window.location.search);
+            const servico = params.get('servico');
+            if (servico) {
+                document.getElementById('servico').value = servico;
+            }
+        });
+    </script>
+</body>
+</html>
